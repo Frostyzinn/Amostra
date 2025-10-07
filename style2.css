@@ -1,0 +1,110 @@
+/* Definições de Variáveis e Estilos Globais */
+:root {
+    --dark-blue: #003366;
+    --aquamarine: #7FFFD4;
+    --white: #FFFFFF;
+    --light-gray: #F0F4F8;
+    --text-color: #333;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    --action-yellow: #FFD700;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text-color); background-color: var(--white); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Header (Adaptado para Alunos) */
+header { background-color: var(--white); box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font-title); font-size: 24px; font-weight: 700; color: var(--dark-blue); text-decoration: none; }
+header nav ul { list-style: none; display: flex; gap: 25px; }
+header nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; transition: color 0.3s ease; }
+header nav a:hover { color: var(--aquamarine); }
+.cta-button.help { background-color: var(--action-yellow); color: var(--dark-blue); font-family: var(--font-title); text-decoration: none; padding: 10px 25px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; }
+.cta-button.help:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+/* Seção Hero do Aluno */
+.hero-aluno { background: linear-gradient(135deg, var(--aquamarine), #a1f0d1); padding: 60px 0; text-align: center; color: var(--dark-blue); }
+.hero-aluno .mascot { border-radius: 50%; border: 5px solid var(--white); box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.hero-aluno h1 { font-family: var(--font-title); font-size: 42px; margin-bottom: 10px; }
+.hero-aluno p { font-size: 18px; max-width: 600px; margin: 0 auto; }
+
+/* Hub de Aventuras */
+.adventure-hub { padding: 80px 20px; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { font-family: var(--font-title); font-size: 36px; color: var(--dark-blue); }
+.adventure-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.adventure-card { background: var(--white); text-align: center; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+.adventure-card:hover { transform: scale(1.05); }
+.adventure-card .icon { font-size: 50px; margin-bottom: 15px; color: var(--dark-blue); }
+.adventure-card h3 { font-family: var(--font-title); color: var(--dark-blue); margin-bottom: 10px; }
+.adventure-card p { margin-bottom: 20px; flex-grow: 1; }
+.card-button { font-family: var(--font-title); text-decoration: none; padding: 10px 20px; border-radius: 50px; background-color: var(--dark-blue); color: var(--white); font-weight: 600; display: inline-block; transition: background-color 0.3s ease; }
+.card-button:hover { background-color: #0055a5; }
+
+/* Seção Código do Herói */
+.superhero-code-section { padding: 80px 0; background-color: var(--light-gray); }
+.code-list { list-style: none; max-width: 800px; margin: 0 auto; }
+.code-list li { background: var(--white); margin-bottom: 10px; padding: 15px 20px; border-radius: 10px; font-size: 18px; display: flex; align-items: center; gap: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.check-icon { color: #28a745; font-size: 24px; font-weight: bold; }
+
+/* Seção de Ajuda */
+.help-section { padding: 80px 20px; text-align: center; }
+.help-section p { max-width: 700px; margin: 0 auto 40px; }
+.trusted-adults { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.adult-card { background: var(--light-gray); padding: 30px; border-radius: 15px; flex: 1; min-width: 250px; max-width: 300px; }
+.adult-icon { font-size: 50px; margin-bottom: 15px; }
+.adult-card h3 { font-family: var(--font-title); color: var(--dark-blue); margin-bottom: 10px; }
+
+/* Footer */
+footer { background-color: var(--dark-blue); color: var(--light-gray); padding: 30px 0; }
+.footer-bottom { text-align: center; font-size: 14px; }
+
+/* Animação */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav { display: none; }
+    .hero-aluno h1 { font-size: 32px; }
+    .adventure-grid { grid-template-columns: 1fr; }
+}
+
+/* Centralizar o botão na tela */
+.container-botao {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    width: 100%;
+    height: 25vh;            /* Ocupa a altura total da tela */
+}
+
+/* Estilo refinado do botão */
+.meu-botao-voltar {
+    display: inline-block;
+    padding: 5px 12px; /* ↓ Menor altura e largura */
+    background-color: var(--aquamarine);
+    color: var(--dark-blue);
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem; /* ↓ Fonte levemente menor */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efeito hover mais suave */
+.meu-botao-voltar:hover {
+    background-color: #55bbaa;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao clicar */
+.meu-botao-voltar:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

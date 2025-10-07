@@ -1,0 +1,288 @@
+/* Definições de Variáveis e Estilos Globais */
+:root {
+    --dark-blue: #003366;
+    --aquamarine: #7FFFD4;
+    --white: #FFFFFF;
+    --light-gray: #F0F4F8;
+    --text-color: #333;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--aquamarine);
+}
+
+/* Botões de Ação (CTA) */
+.cta-button {
+    font-family: var(--font-title);
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: var(--aquamarine);
+    color: var(--dark-blue);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--aquamarine);
+}
+
+.cta-button.emergency {
+    background-color: #ff4d4d;
+    color: var(--white);
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://placehold.co/1200x600/003366/FFF?text=Escola+Segura') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Seção Mascote */
+.mascot-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 20px;
+}
+
+.mascot-intro img {
+    border-radius: 50%;
+    border: 5px solid var(--aquamarine);
+}
+
+.speech-bubble {
+    position: relative;
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.speech-bubble h2 {
+    font-family: var(--font-title);
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+/* Cards de Navegação */
+.navigation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
+}
+
+.card h3 {
+    font-family: var(--font-title);
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 700;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Seção Nossa Abordagem */
+.our-approach {
+    background-color: var(--light-gray);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.our-approach h2 {
+    font-family: var(--font-title);
+    font-size: 36px;
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+}
+
+.pillars {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.pillar .icon {
+    font-size: 50px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.pillar h3 {
+    font-family: var(--font-title);
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--light-gray);
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-about, .footer-links, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer h4 {
+    font-family: var(--font-title);
+    color: var(--aquamarine);
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: var(--light-gray);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--aquamarine);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Animação de Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Design Responsivo */
+@media (max-width: 768px) {
+    header nav { display: none; } /* Simplificação para exemplo. O ideal é um menu hamburguer com JS */
+    .hero h1 { font-size: 36px; }
+    .mascot-intro, .pillars { flex-direction: column; text-align: center; }
+    .navigation-cards { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; gap: 40px; }
+}

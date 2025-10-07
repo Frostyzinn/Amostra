@@ -1,0 +1,134 @@
+/* Definições de Variáveis e Estilos Globais */
+:root {
+    --dark-blue: #003366;
+    --aquamarine: #7FFFD4;
+    --white: #FFFFFF;
+    --light-gray: #F0F4F8;
+    --text-color: #333;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text-color); background-color: var(--white); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Header e Hero (Estilos mantidos) */
+header { background-color: var(--white); box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font-title); font-size: 24px; font-weight: 700; color: var(--dark-blue); text-decoration: none; }
+header nav ul { list-style: none; display: flex; gap: 25px; }
+header nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; transition: color 0.3s ease; }
+header nav a:hover { color: var(--aquamarine); }
+.cta-button { font-family: var(--font-title); text-decoration: none; padding: 10px 25px; border-radius: 50px; background-color: var(--aquamarine); color: var(--dark-blue); font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-block; }
+.cta-button:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,51,102,0.2); }
+.cta-button.secondary { background-color: transparent; color: var(--white); border: 2px solid var(--aquamarine); }
+.cta-button.emergency { background-color: #ff4d4d; color: var(--white); }
+.hero { background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://placehold.co/1200x600/003366/FFF?text=Escola+Segura') no-repeat center center/cover; color: var(--white); text-align: center; padding: 100px 0; }
+.hero h1 { font-family: var(--font-title); font-size: 48px; margin-bottom: 20px; }
+.hero p { font-size: 20px; max-width: 600px; margin: 0 auto 30px; }
+.hero-buttons { display: flex; justify-content: center; gap: 20px; }
+
+/* Utilitário para Cabeçalhos de Seção */
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { font-family: var(--font-title); font-size: 36px; color: var(--dark-blue); margin-bottom: 10px; }
+.section-header p { font-size: 18px; color: #555; max-width: 600px; margin: 0 auto; }
+
+/* NOVA SEÇÃO DE DESTAQUE */
+.highlight-section { background-color: var(--dark-blue); color: var(--white); padding: 80px 0; text-align: center; }
+.highlight-icon { font-size: 50px; color: var(--aquamarine); margin-bottom: 20px; }
+.highlight-section h2 { font-family: var(--font-title); font-size: 36px; color: var(--aquamarine); margin-bottom: 15px; }
+.highlight-section p { max-width: 700px; margin: 0 auto 30px; line-height: 1.7; font-size: 18px; }
+.highlight-section .cta-button { background-color: var(--aquamarine); color: var(--dark-blue); }
+
+/* Seção Carrossel (Ajustes Visuais) */
+.carousel-section { padding: 80px 20px; }
+.carousel-container { position: relative; max-width: 800px; margin: 0 auto; overflow: hidden; }
+.carousel-slides { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-slide { min-width: 100%; box-sizing: border-box; padding: 10px; }
+.speech-bubble { background-color: var(--light-gray); padding: 40px; border-radius: 15px; text-align: center; position: relative; }
+.speech-bubble p { font-size: 18px; font-style: italic; margin-bottom: 20px; position: relative; }
+.speech-bubble p::before { content: '“'; font-size: 80px; color: var(--aquamarine); position: absolute; left: -25px; top: -20px; font-family: 'Times New Roman', Times, serif; }
+.speech-bubble h4 { font-family: var(--font-title); color: var(--dark-blue); font-weight: 600; }
+.carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0,51,102,0.5); color: var(--white); border: none; font-size: 24px; padding: 5px 12px; height: 40px; width: 40px; border-radius: 50%; cursor: pointer; z-index: 10; transition: background-color 0.3s ease; }
+.carousel-button:hover { background-color: var(--dark-blue); }
+.carousel-button.prev { left: 0; }
+.carousel-button.next { right: 0; }
+
+/* SEÇÃO COMPROMISSOS (REMODELADA) */
+.commitments-section { padding: 80px 0; background-color: var(--light-gray); }
+.commitments-grid { display: flex; justify-content: space-between; gap: 30px; }
+.commitment-card { background: var(--white); text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; flex: 1; }
+.commitment-card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0,51,102,0.15); }
+.commitment-card .icon { font-size: 45px; color: var(--dark-blue); margin-bottom: 20px; }
+.commitment-card h3 { font-family: var(--font-title); color: var(--dark-blue); margin-bottom: 15px; }
+
+/* SEÇÃO DE CONTATO (REMODELADA) */
+.contact-section { padding: 80px 20px; }
+.contact-wrapper { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; align-items: flex-start; margin-top: 20px; }
+.contact-form { text-align: left; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 700; color: var(--dark-blue); }
+.form-group input, .form-group textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-family: var(--font-body); font-size: 16px; transition: border-color 0.3s ease; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--dark-blue); }
+.contact-form .cta-button { width: 100%; padding: 15px; font-size: 18px; }
+.contact-info { background: var(--light-gray); padding: 30px; border-radius: 10px; }
+.contact-info h3 { font-family: var(--font-title); color: var(--dark-blue); margin-bottom: 25px; }
+.info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.info-item .icon { font-size: 24px; color: var(--dark-blue); }
+
+/* Animação e Footer (Mantidos) */
+footer { background-color: var(--dark-blue); color: var(--light-gray); padding: 50px 0 20px; }
+/* (Restante do CSS do footer pode ser copiado da versão anterior) */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .commitments-grid { flex-direction: column; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    header nav { display: none; }
+    .hero h1, .highlight-section h2, .section-header h2 { font-size: 32px; }
+}
+
+
+
+
+/* Centralizar o botão na tela */
+.container-botao {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    width: 100%;
+    height: 25vh;            /* Ocupa a altura total da tela */
+}
+
+/* Estilo refinado do botão */
+.meu-botao-voltar {
+    display: inline-block;
+    padding: 5px 12px; /* ↓ Menor altura e largura */
+    background-color: var(--aquamarine);
+    color: var(--dark-blue);
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem; /* ↓ Fonte levemente menor */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Efeito hover mais suave */
+.meu-botao-voltar:hover {
+    background-color: #55bbaa;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao clicar */
+.meu-botao-voltar:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

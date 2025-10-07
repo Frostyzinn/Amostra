@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaSafe | Portal do Educador</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">EducaSafe</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index1.html">Para Pais</a></li>
+                    <li><a href="index2.html">Para Alunos</a></li>
+                    <li><a href="index4.html">Blog</a></li>
+                </ul>
+            </nav>
+            <a href="#apoio" class="cta-button">Canal de Apoio</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-educador">
+            <div class="container">
+                <h1>Ferramentas para Construir uma Cultura de Segurança</h1>
+                <p>Seu espaço para encontrar recursos, estratégias e apoio para o dia a dia em sala de aula.</p>
+            </div>
+        </section>
+
+        <section id="recursos" class="resource-hub container fade-in">
+            <div class="section-header">
+                <h2>Banco de Recursos Pedagógicos</h2>
+                <p>Filtre por pilar e encontre o material ideal para sua necessidade.</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="fisica">Segurança Física</button>
+                <button class="filter-btn" data-filter="emocional">Bem-Estar Emocional</button>
+                <button class="filter-btn" data-filter="digital">Cidadania Digital</button>
+            </div>
+
+            <div class="resource-grid">
+                <div class="resource-card" data-category="fisica">
+                    <div class="icon">&#128737;</div>
+                    <h3>Plano de Aula: Prevenção de Acidentes</h3>
+                    <p>Atividade lúdica para identificar e corrigir riscos no ambiente escolar.</p>
+                    <a href="#" class="card-button">Baixar PDF</a>
+                </div>
+                <div class="resource-card" data-category="fisica">
+                    <div class="icon">&#128226;</div>
+                    <h3>Protocolo de Emergência</h3>
+                    <p>Guia rápido e visual sobre como agir em situações de emergência.</p>
+                    <a href="#" class="card-button">Ver Guia</a>
+                </div>
+
+                <div class="resource-card" data-category="emocional">
+                    <div class="icon">&#129505;</div>
+                    <h3>Dinâmica: Roda da Empatia</h3>
+                    <p>Promova a escuta ativa e o respeito mútuo em sala de aula.</p>
+                    <a href="#" class="card-button">Baixar Atividade</a>
+                </div>
+                <div class="resource-card" data-category="emocional">
+                    <div class="icon">&#128172;</div>
+                    <h3>Guia: Identificando Sinais de Bullying</h3>
+                    <p>Material de apoio para identificar e intervir em casos de bullying.</p>
+                    <a href="#" class="card-button">Ler Guia</a>
+                </div>
+
+                <div class="resource-card" data-category="digital">
+                    <div class="icon">&#128241;</div>
+                    <h3>Jogo: Detetives da Internet</h3>
+                    <p>Ensine os alunos a identificar fake news de forma divertida.</p>
+                    <a href="#" class="card-button">Acessar Jogo</a>
+                </div>
+                <div class="resource-card" data-category="digital">
+                     <div class="icon">&#128100;</div>
+                    <h3>Apresentação: Pegada Digital</h3>
+                    <p>Slides prontos para uma aula sobre responsabilidade online.</p>
+                    <a href="#" class="card-button">Baixar Slides</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cenarios" class="scenarios-section fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Estudo de Caso: O que você faria?</h2>
+                    <p>Analise cenários comuns e descubra as melhores abordagens.</p>
+                </div>
+                <div class="scenario-card">
+                    <h4>Cenário: Conflito no Recreio</h4>
+                    <p>"Dois alunos do 4º ano começam a discutir rispidamente por causa de um brinquedo. A discussão escala para empurrões. Como você, o professor de plantão, deve intervir de forma eficaz e pedagógica?"</p>
+                    <a href="#" class="cta-button secondary">Ver Abordagens &rarr;</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="apoio" class="contact-section container fade-in">
+            <div class="section-header">
+                <h2>Canal de Apoio ao Educador</h2>
+                <p>Precisa de ajuda com um caso específico ou tem uma sugestão? Fale conosco.</p>
+            </div>
+            <form class="contact-form-educator">
+                <div class="form-row">
+                    <div class="form-group"><label for="name">Seu Nome</label><input type="text" id="name" name="name" required></div>
+                    <div class="form-group"><label for="subject">Função (Ex: Prof. de História)</label><input type="text" id="subject" name="subject" required></div>
+                </div>
+                <div class="form-group"><label for="message">Descreva a situação ou sua dúvida</label><textarea id="message" name="message" rows="6" required placeholder="Por favor, não inclua nomes de alunos. Descreva a situação de forma geral."></textarea></div>
+                <button type="submit" class="cta-button">Enviar para Equipe Pedagógica</button>
+            </form>
+        </section>
+
+    </main>
+
+    <div class="container-botao">
+     <a href="index.html" class="meu-botao-voltar">Voltar para a Página Inicial</a>
+    </div>
+
+    <footer class="footer-minimal">
+        <div class="container">
+            <p>&copy; 2025 EducaSafe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script3.js"></script>
+</body>
+</html>
