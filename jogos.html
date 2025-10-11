@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaSafe | Jogos Educativos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="paginas_internas.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">EducaSafe</a>
+            <nav>
+                <ul>
+                    <li><a href="index2.html">Portal do Aluno</a></li>
+                    <li><a href="missoes.html">Missões</a></li>
+                    <li><a href="videos.html">Vídeos</a></li>
+                </ul>
+            </nav>
+            <a href="ajuda.html" class="cta-button help">Precisa Conversar?</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1>Jogos Educativos</h1>
+                <p>Divirta-se enquanto aprende a ser um herói da segurança!</p>
+            </div>
+        </section>
+
+        <section class="content-grid-section container fade-in">
+            <div class="item-grid">
+                <div class="item-card">
+                    <div class="icon">&#128373;</div>
+                    <h3>Guardiões da Internet</h3>
+                    <p>Responda ao quiz e prove que você sabe tudo sobre segurança online.</p>
+                    <a href="#quiz-section" class="card-button">Jogar</a>
+                </div>
+                <div class="item-card">
+                    <div class="icon">&#129309;</div>
+                    <h3>Amigo para Ajudar</h3>
+                    <p>Um jogo de simulação onde você ajuda colegas em situações difíceis, como o bullying.</p>
+                    <a href="#" class="card-button disabled" title="Em breve">Jogar</a>
+                </div>
+                <div class="item-card">
+                    <div class="icon">&#128272;</div>
+                    <h3>Mestre das Senhas</h3>
+                    <p>Crie senhas super-fortes para proteger seus tesouros digitais dos vilões da internet.</p>
+                    <a href="#" class="card-button disabled" title="Em breve">Jogar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="container fade-in">
+            <div class="section-header">
+                <h2>Quiz: Guardiões da Internet</h2>
+            </div>
+            <div id="quiz-container">
+                <div class="quiz-game">
+                    <h3 id="question">Carregando pergunta...</h3>
+                    <div id="answer-buttons" class="btn-grid">
+                        </div>
+                </div>
+                <div id="result-container" class="hide">
+                    <h3 id="score"></h3>
+                    <button id="restart-btn" class="card-button">Jogar Novamente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="container-botao">
+        <a href="index2.html" class="meu-botao-voltar">Voltar para o Portal</a>
+     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EducaSafe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script> </body>
+</html>

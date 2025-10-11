@@ -1,0 +1,140 @@
+/* (Cole este código no final do seu arquivo paginas_internas.css) */
+
+/* Estilos do Quiz */
+#quiz-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#quiz-container {
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+#quiz-container h3 {
+    font-family: var(--font-title);
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.btn {
+    font-family: var(--font-body);
+    font-weight: 700;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #0055a5;
+}
+.btn.correct { background-color: #28a745; }
+.btn.wrong { background-color: #dc3545; }
+.hide { display: none; }
+#result-container { text-align: center; }
+
+/* Estilos das Missões */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.mission-card {
+    background: var(--white);
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+.mission-card .icon { font-size: 50px; margin-bottom: 15px; color: var(--dark-blue); }
+.mission-card h3 { font-family: var(--font-title); color: var(--dark-blue); margin-bottom: 10px; }
+.mission-card p { margin-bottom: 20px; flex-grow: 1; }
+.mission-button {
+    font-family: var(--font-title);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.mission-button:hover { background-color: #0055a5; }
+.mission-card.completed {
+    border-color: var(--aquamarine);
+    background-color: #f0fdf9;
+}
+.mission-card.completed .mission-button {
+    background-color: #28a745;
+    cursor: default;
+}
+
+/* Estilos dos Vídeos */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.video-card h3, .video-card p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Estilos do FAQ */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-container details {
+    background: var(--white);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.faq-container summary {
+    font-weight: 700;
+    font-family: var(--font-title);
+    color: var(--dark-blue);
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.faq-container summary::after { /* Adiciona uma seta */
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    transition: transform 0.2s;
+}
+.faq-container details[open] summary::after {
+    transform: rotate(180deg);
+}
+.faq-container p {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--light-gray);
+}
